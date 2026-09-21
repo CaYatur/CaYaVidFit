@@ -1,5 +1,8 @@
 # CaYaVidFit
 
+![CaYaVidFit](docs/screenshot.png)
+
+
 **ffmpeg** ile çalışan Windows video boyut ayarlayıcı (WPF / .NET 8).
 
 Videoyu sürükleyip bırakın, küçültme veya artırma preset’i (veya **hedef MB**) seçin, dışa aktarma formatını belirleyin ve kodlayın. **Tek dosya** self-contained `.exe` olarak yayınlanır.

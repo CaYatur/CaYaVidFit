@@ -1,10 +1,30 @@
 # CaYaVidFit
 
-Windows video size fitter powered by **ffmpeg** (WPF / .NET 8).
+<p align="center">
+  <img src="docs/logo.png" alt="CaYaVidFit logo" width="128" height="128">
+</p>
 
-Drag-and-drop a video, pick a shrink or boost preset (or a **target MB**), choose an export format, then encode. Ships as a **single-file** self-contained `.exe`.
+<p align="center">
+  <strong>Windows video size fitter</strong> powered by <strong>ffmpeg</strong> (WPF / .NET 8).<br/>
+  Drag-and-drop a video, pick a shrink or boost preset (or a <strong>target MB</strong>), choose an export format, then encode.<br/>
+  Ships as a <strong>single-file</strong> self-contained <code>.exe</code>.
+</p>
 
-> Turkish: [README.tr.md](README.tr.md) · Brand: [cayadev.com](https://cayadev.com)
+<p align="center">
+  <a href="https://github.com/CaYatur/CaYaVidFit/releases"><img src="https://img.shields.io/github/v/release/CaYatur/CaYaVidFit?label=release" alt="Release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT"></a>
+  <a href="https://cayadev.com"><img src="https://img.shields.io/badge/brand-CaYaDev-C42021" alt="CaYaDev"></a>
+</p>
+
+<p align="center">
+  <img src="docs/screenshot.png" alt="CaYaVidFit application screenshot" width="900">
+</p>
+
+> Turkish docs: [README.tr.md](README.tr.md) · Brand: [cayadev.com](https://cayadev.com)
+
+## Download
+
+Get the latest portable build from **[Releases](https://github.com/CaYatur/CaYaVidFit/releases)**.
 
 ## Features
 
@@ -26,12 +46,12 @@ UI defaults to **English**. If the Windows display language is Turkish (`tr-*`),
 ## Requirements
 
 - Windows x64
-- ffmpeg / ffprobe (app can install them)
+- ffmpeg / ffprobe (the app can install them)
 
 ## Run (portable)
 
 ```powershell
-# published single-file exe (after publish below)
+# from a Release download, or after publish:
 .\dist\CaYaVidFit.exe
 ```
 
@@ -52,6 +72,8 @@ dotnet publish .\src\CaYaVidFit\CaYaVidFit.csproj `
   -o .\dist
 ```
 
+Or: `.\tools\Publish.ps1`
+
 ## Project layout
 
 ```
@@ -59,9 +81,11 @@ CaYaVidFit/
   CaYaVidFit.sln
   README.md / README.tr.md
   LICENSE
+  docs/logo.png, docs/screenshot.png
   src/CaYaVidFit/          # WPF app
     Assets/logo.png, app.ico
     Models/, Services/
+  tools/Publish.ps1
 ```
 
 ## License
