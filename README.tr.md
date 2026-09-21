@@ -14,6 +14,14 @@
   <img src="docs/screenshot.png" alt="CaYaVidFit ekran görüntüsü" width="900">
 </p>
 
+<p align="center">
+  <a href="https://github.com/CaYatur/CaYaVidFit/releases"><img src="https://img.shields.io/github/v/release/CaYatur/CaYaVidFit?label=release" alt="Release"></a>
+  <a href="https://github.com/CaYatur/CaYaVidFit/releases"><img src="https://img.shields.io/github/downloads/CaYatur/CaYaVidFit/total?label=downloads" alt="Downloads"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT"></a>
+  <a href="https://cayadev.com"><img src="https://img.shields.io/badge/brand-CaYaDev-C42021" alt="CaYaDev"></a>
+</p>
+
+
 > English: [README.md](README.md) · Marka: [cayadev.com](https://cayadev.com)
 
 ## İndirme
