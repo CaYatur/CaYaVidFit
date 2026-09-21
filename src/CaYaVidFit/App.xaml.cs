@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System.Globalization;
+using System.IO;
+using System.Threading;
 using System.Windows;
 using System.Windows.Threading;
 
@@ -8,6 +10,23 @@ public partial class App : Application
 {
     protected override void OnStartup(StartupEventArgs e)
     {
+        var lang = Environment.GetEnvironmentVariable("CAYAVIDFIT_LANG");
+        if (!string.IsNullOrWhiteSpace(lang))
+        {
+            try
+            {
+                var culture = new CultureInfo(lang);
+                CultureInfo.DefaultThreadCurrentCulture = culture;
+                CultureInfo.DefaultThreadCurrentUICulture = culture;
+                Thread.CurrentThread.CurrentCulture = culture;
+                Thread.CurrentThread.CurrentUICulture = culture;
+            }
+            catch
+            {
+                // ignore invalid culture
+            }
+        }
+
         DispatcherUnhandledException += (_, args) =>
         {
             TryLog(args.Exception);
@@ -18,6 +37,7 @@ public partial class App : Application
         {
             if (args.ExceptionObject is Exception ex) TryLog(ex);
         };
+
         base.OnStartup(e);
     }
 
@@ -30,6 +50,9 @@ public partial class App : Application
                 "CaYaVidFit_crash.txt");
             File.WriteAllText(path, DateTime.Now + "\n" + ex);
         }
-        catch { /* ignore */ }
+        catch
+        {
+            // ignore
+        }
     }
 }
